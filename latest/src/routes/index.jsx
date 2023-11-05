@@ -3,6 +3,7 @@ import { createBrowserRouter, redirect } from "react-router-dom";
 import FormLogin from "../views/login";
 import PromotionPage from "../components/PromotionPage";
 import BaseLayout from "../components/BaseLayout";
+import Booking from "../components/Booking";
 
 const router = createBrowserRouter([
     {
@@ -22,10 +23,15 @@ const router = createBrowserRouter([
         element: <BaseLayout />,
         children: [
             {
-                path: "Promotion",
-                element: <PromotionPage />
+                // path: "Promotion",
+                // element: <PromotionPage />
             },
+
         ]
+    },
+    {
+        path: "Booking",
+        element: <Booking />
     },
 ])
 

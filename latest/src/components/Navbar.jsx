@@ -3,21 +3,19 @@ import { logoutUser } from "../store/action/actionCreator";
 import { useDispatch } from "react-redux";
 
 const Navbar = () => {
-  // const dispatch = useDispatch()
-  // const navigate = useNavigation()
-
-  // const handleLogout = () => {
-  //   dispatch(logoutUser())
-  //   navigate("/login")
-  // }
   const navbarStyle = {
     position: "fixed",
     top: 0,
-    background: "#2F5296"
+    background: "#2F5296",
+    color: "white"
   }
   const logoStyle = {
     width: '150px',
     height: 'auto',
+  };
+
+  const navLinkStyle = {
+    color: "white",
   };
   return (
     <>
@@ -29,9 +27,10 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              {/* <Link to="/" className="nav-link active" aria-current="page" href="#">Home</Link> */}
-              <Link to="/item" className="nav-link">Item</Link>
-              {/* <Link to="/login" className="nav-link" onClick={handleLogout}>Logout</Link> */}
+              <Link to="/" className="nav-link" style={navLinkStyle}>Home</Link>
+              <Link to="/promotion" className="nav-link" style={navLinkStyle}>Promotion</Link>
+              <Link to="/booking" className="nav-link" style={navLinkStyle}>Booking</Link>
+              <Link to="/login" className="nav-link" style={navLinkStyle}>Logout</Link>
             </div>
           </div>
         </div>

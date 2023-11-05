@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { Link, NavLink, useNavigation } from "react-router-dom";
+import Navbar from "./Navbar";
+
 
 export default function PromotionPage() {
     const [promos, setPromos] = useState([]);
 
     useEffect(() => {
-        // Lakukan permintaan GET ke API promosi dengan menggunakan fetch atau axios
         const apiUrl = "https://api.unsplash.com/photos/?client_id=yXBCJGnl1kTsAZvXLvEmmPT4ZdfbHeuI3ZiOTRMZifQ";
 
         fetch(apiUrl, {
@@ -28,20 +30,22 @@ export default function PromotionPage() {
         width: "100%",
         height: "300px",
         objectFit: "cover",
-        // border: "2px solid #333",
         borderRadius: "5px"
     };
 
     return (
-        <div>
-            <h2>Menu Promosi</h2>
-            {/* promos.urls.full */}
-            {promos.map((promo) => (
-                <div key={promo.id}>
-                    <img src={promo.urls.small} alt="" style={imageStyle} />
-                    <h3>{promo.user.name}</h3>
-                </div>
-            ))}
-        </div>
+        <>
+            <Navbar />
+            <div>
+                <h2 style={{ marginTop: "70px" }}>Menu Promosi</h2>
+                {/* promos.urls.full */}
+                {promos.map((promo) => (
+                    <div key={promo.id}>
+                        <img src={promo.urls.small} alt="" style={imageStyle} />
+                        <h3>{promo.user.name}</h3>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 }

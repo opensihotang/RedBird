@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
     const footerStyle = {
-        background: "#333", // Warna latar belakang footer
-        color: "#fff", // Warna teks footer
-        padding: "20px 0", // Ruang dalam footer
-        textAlign: "center", // Teks rata tengah
+        background: "#333",
+        color: "#fff",
+        padding: "20px 0",
+        textAlign: "center",
     };
 
     return (
