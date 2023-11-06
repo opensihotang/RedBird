@@ -60,7 +60,7 @@ const Booking = () => {
     useEffect(() => {
         if (!window.google) {
             const script = document.createElement("script");
-            script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCOMTOU_5ydEqEW_FLwRv7mok-WuR3vPGs&libraries=places`;
+            script.src = `https://maps.googleapis.com/maps/api/js?key=clientid&libraries=places`;
             script.onload = initMap;
             document.head.appendChild(script);
         } else {

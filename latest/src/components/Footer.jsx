@@ -11,8 +11,8 @@ const Footer = () => {
     return (
         <footer style={footerStyle}>
             <div className="container">
-                <p>&copy; {new Date().getFullYear()} BlueBird</p>
-                <p>Contact: Bluuuee@mail.com</p>
+                <p>&copy; {new Date().getFullYear()} RedBird</p>
+                <p>Contact: RedBird@mail.com</p>
             </div>
         </footer>
     );
